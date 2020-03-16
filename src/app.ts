@@ -1,3 +1,5 @@
+console.log('111');
+/*
 const express = require('express');
 const config = require('config');
 const mongoose = require('mongoose');
@@ -17,3 +19,5 @@ async  function start(){
     }
 }
 start();
+
+ */
