@@ -1,0 +1,4 @@
+{
+    "LPort": 5001,
+    "MongoURI": "mongodb+srv://FFx0001:VmJ2TN94mxc4zVGr@cluster0-fgksy.mongodb.net/test?retryWrites=true&w=majority"
+}
