@@ -71,15 +71,7 @@ function start() {
         });
     });
 }
-app.use('/api/auth', require('routers/auth.routes'));
-/*
-let test = function (x:number):number{return x+1;};
-// hello message body on init
-app.get('/', (req:Request,res:Response,next:NextFunction)=>{
-    console.log(test(5));
-    res.send('hello');
-});
-*/
+app.use('/api/auth', require('./routers/auth.routes'));
 start();
 /*
 // node clear code

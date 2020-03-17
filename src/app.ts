@@ -3,21 +3,23 @@ import mongoose from 'mongoose';
 import config from 'config';
 const LPort:number = config.get('LPort')||5000;
 const app = express();
-// routers
-async  function start(){
-    try{
-        await mongoose.connect(config.get('MongoURI'),{
-            useNewUrlParser:true,
-            useUnifiedTopology:true,
-            useCreateIndex:true
-        });
-        app.listen(LPort,()=>console.log(`App has been started on port: ${LPort}`));
-    }catch (e) {
-        console.log('Server Error',e.message)
-        process.exit(1);
+
+    // routers
+    async  function start(){
+        try{
+            await mongoose.connect(config.get('MongoURI'),{
+                useNewUrlParser:true,
+                useUnifiedTopology:true,
+                useCreateIndex:true
+            });
+            app.listen(LPort,()=>console.log(`App has been started on port: ${LPort}`));
+        }catch (e) {
+            console.log('Server Error',e.message)
+            process.exit(1);
+        }
     }
-}
-app.use('/api/auth', require('../routers/auth.routes'))
+
+app.use('/api/auth', require('./routers/auth.routes'));
 start();
 /*
 // node clear code

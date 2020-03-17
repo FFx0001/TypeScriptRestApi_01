@@ -44,6 +44,8 @@ router.post('/register', function (req, res) { return __awaiter(void 0, void 0, 
     return __generator(this, function (_a) {
         try {
             //  const{email,password}=req.body;
+            res.send('register!');
+            console.log("register");
             return [2 /*return*/, res.status(200)];
         }
         catch (e) {
@@ -57,6 +59,8 @@ router.post('/login', function (req, res) { return __awaiter(void 0, void 0, voi
     return __generator(this, function (_a) {
         try {
             //  const{email,password}=req.body;
+            res.send('login!');
+            console.log("login");
             return [2 /*return*/, res.status(200)];
         }
         catch (e) {
@@ -65,4 +69,7 @@ router.post('/login', function (req, res) { return __awaiter(void 0, void 0, voi
         return [2 /*return*/];
     });
 }); });
+router.get('/get', function (request, response) {
+    response.send('Hello world!');
+});
 module.exports = router;
