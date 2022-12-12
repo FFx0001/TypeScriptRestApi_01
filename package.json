@@ -25,7 +25,7 @@
   "homepage": "https://github.com/FFx0001/TypeScriptRestApi_01#readme",
   "dependencies": {
     "concurrently": "^5.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@types/config": "0.0.36",
